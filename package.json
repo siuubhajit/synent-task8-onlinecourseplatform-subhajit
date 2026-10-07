@@ -1,0 +1,14 @@
+{
+  "name": "online-course-platform",
+  "version": "1.0.0",
+  "description": "Full Stack Online Course Platform with React, Node.js, Express, MongoDB, and Razorpay",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": ["lms", "course-platform", "react", "express", "mongodb", "razorpay"],
+  "author": "Alex Rivera",
+  "license": "MIT"
+}
