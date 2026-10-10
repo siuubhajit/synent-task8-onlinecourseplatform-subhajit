@@ -106,18 +106,4 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## 📦 Commit Archives (v1.zip - v10.zip)
 
-The project includes 10 progressive commit archives:
-- `v1.zip`: Scaffolding, configuration, and base server structure.
-- `v2.zip`: MongoDB connection, User model, and JWT token utilities.
-- `v3.zip`: Authentication routes, controllers, and email notification service.
-- `v4.zip`: Course schema, curriculum structures, and database seeder.
-- `v5.zip`: Public course catalog API with search and filtering.
-- `v6.zip`: Razorpay test mode payment integration and enrollment models.
-- `v7.zip`: Student learning system, progress tracking, and video endpoints.
-- `v8.zip`: Admin management API and platform analytics.
-- `v9.zip`: Frontend client foundation, theme switcher, and catalog pages.
-- `v10.zip`: Full classroom player, Razorpay checkout, admin portal, and documentation.
-
-Refer to `COMMITS.md` for manual Git commit instructions.
