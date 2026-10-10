@@ -9,9 +9,14 @@ import { NotificationToast } from './components/NotificationToast';
 import { HomePage } from './pages/HomePage';
 import { CourseCatalogPage } from './pages/CourseCatalogPage';
 import { CourseDetailsPage } from './pages/CourseDetailsPage';
+import { DashboardPage } from './pages/DashboardPage';
+import { CoursePlayerPage } from './pages/CoursePlayerPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
+import { VerifyEmailPage } from './pages/VerifyEmailPage';
+import { ResetPasswordPage } from './pages/ResetPasswordPage';
 
 export const AppContent = () => {
-  const [route, setRoute] = useState('home'); // 'home' | 'catalog' | 'course-details' | 'dashboard' | 'classroom' | 'admin'
+  const [route, setRoute] = useState('home'); // 'home' | 'catalog' | 'course-details' | 'dashboard' | 'classroom' | 'admin' | 'verify' | 'reset-password'
   const [routeParams, setRouteParams] = useState({});
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authModalMode, setAuthModalMode] = useState('login');
@@ -49,6 +54,16 @@ export const AppContent = () => {
             onEnrollSuccess={(msg) => showToast(msg, 'success')}
           />
         )}
+        {route === 'dashboard' && <DashboardPage onNavigate={navigate} />}
+        {route === 'classroom' && (
+          <CoursePlayerPage
+            courseId={routeParams.courseId}
+            onNavigate={navigate}
+          />
+        )}
+        {route === 'admin' && <AdminDashboardPage onNavigate={navigate} />}
+        {route === 'verify' && <VerifyEmailPage onNavigate={navigate} />}
+        {route === 'reset-password' && <ResetPasswordPage onNavigate={navigate} />}
       </main>
 
       <Footer onNavigate={navigate} />
